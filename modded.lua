@@ -72,7 +72,7 @@ local args = {
         [1] = "+PP6"
     }
 }
-while getgenv().ms == true do
+while getgenv().pp == true do
 wait(0.2)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
@@ -89,7 +89,7 @@ local args = {
         [1] = "+BT8"
     }
 }
-while getgenv().ms == true do
+while getgenv().bt == true do
 wait(0.2)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
@@ -106,7 +106,7 @@ local args = {
         [1] = "+FS4"
     }
 }
-while getgenv().ms == true do
+while getgenv().fs == true do
 wait(0.2)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
