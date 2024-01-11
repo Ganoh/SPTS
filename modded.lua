@@ -27,37 +27,54 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Autofarming Stuff", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("AFK Farming stuff")
-getgenv().test = true
+getgenv().ms = true
 local Toggle = Tab:CreateToggle({
    Name = "Auto MS",
    CurrentValue = false,
    Callback = function(Value)
-getgenv().test = Value
+getgenv().ms = Value
 local args = {
     [1] = {
         [1] = "+MS6"
     }
 }
-while getgenv().test == true do
+while getgenv().ms == true do
 wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
 })
-getgenv().autobreak = true
+getgenv().jf = true
 local Toggle = Tab:CreateToggle({
    Name = "Auto JF",
    CurrentValue = false,
    Callback = function(Value)
-   getgenv().autobreak = Value
+   getgenv().jf = Value
 local args = {
     [1] = {
         [1] = "+JF7"
     }
 }
-   while getgenv().autobreak == true do
+   while getgenv().jf == true do
    wait(0.1)
    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
    end
+   end,
+})
+getgenv().pp = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto PP",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().pp = Value
+local args = {
+    [1] = {
+        [1] = "+PP6"
+    }
+}
+while getgenv().ms == true do
+wait(0.1)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
    end,
 })
