@@ -69,7 +69,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().pp = Value
 local args = {
     [1] = {
-        [1] = "+PP6"
+        [1] = "+PP7"
     }
 }
 while getgenv().pp == true do
