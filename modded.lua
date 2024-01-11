@@ -95,3 +95,20 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+getgenv().fs = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto FS",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().fs = Value
+local args = {
+    [1] = {
+        [1] = "+FS4"
+    }
+}
+while getgenv().ms == true do
+wait(0.2)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
