@@ -52,7 +52,7 @@ local Toggle = Tab:CreateToggle({
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF8"
+        [1] = "+JF9"
     }
 }
    while getgenv().jf == true do
