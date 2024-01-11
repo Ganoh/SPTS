@@ -86,7 +86,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().bt = Value
 local args = {
     [1] = {
-        [1] = "+BT8"
+        [1] = "+BT9"
     }
 }
 while getgenv().bt == true do
