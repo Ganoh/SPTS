@@ -78,3 +78,20 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+getgenv().bt = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto BT",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().bt = Value
+local args = {
+    [1] = {
+        [1] = "+BT8"
+    }
+}
+while getgenv().ms == true do
+wait(0.2)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
