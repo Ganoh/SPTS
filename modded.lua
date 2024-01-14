@@ -114,7 +114,7 @@ end
 })
 getgenv().respawn = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn",
+   Name = "Auto Respawn 20s",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().respawn = Value
@@ -124,7 +124,7 @@ local args = {
     }
 }
 while getgenv().respawn == true do
-wait(10)
+wait(20)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
