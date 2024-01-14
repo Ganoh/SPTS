@@ -39,7 +39,7 @@ local args = {
     }
 }
 while getgenv().ms == true do
-wait(0.2)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -52,11 +52,11 @@ local Toggle = Tab:CreateToggle({
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF10"
+        [1] = "+JF11"
     }
 }
    while getgenv().jf == true do
-   wait(0.2)
+   wait(0.1)
    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
    end
    end,
@@ -73,7 +73,7 @@ local args = {
     }
 }
 while getgenv().pp == true do
-wait(0.2)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -90,7 +90,7 @@ local args = {
     }
 }
 while getgenv().bt == true do
-wait(0.2)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -107,7 +107,7 @@ local args = {
     }
 }
 while getgenv().fs == true do
-wait(0.2)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
