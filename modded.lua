@@ -128,4 +128,4 @@ wait(20)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
-}))
+})
