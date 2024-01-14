@@ -29,13 +29,13 @@ local Tab = Window:CreateTab("Autofarming Stuff", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("AFK Farming stuff")
 getgenv().ms = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto MS:100B",
+   Name = "Auto MS:10T",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().ms = Value
 local args = {
     [1] = {
-        [1] = "+MS12"
+        [1] = "+MS13"
     }
 }
 while getgenv().ms == true do
@@ -46,13 +46,13 @@ end
 })
 getgenv().jf = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto JF:100B",
+   Name = "Auto JF:10T",
    CurrentValue = false,
    Callback = function(Value)
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF12"
+        [1] = "+JF13"
     }
 }
    while getgenv().jf == true do
@@ -143,6 +143,25 @@ local args = {
 while getgenv().respawn == true do
 wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
+local Tab = Window:CreateTab("Auto Claim reward", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("TPM reward")
+getgenv().rw = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Claim FS,BT,PP",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().rw = Value
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+while getgenv().rw == true do
+wait(1)
+game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
 end
    end,
 })
