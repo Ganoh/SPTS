@@ -112,7 +112,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
-getgenv().fs = true
+getgenv().respawn = true
 local Toggle = Tab:CreateToggle({
    Name = "Auto Respawn",
    CurrentValue = false,
