@@ -124,7 +124,7 @@ local args = {
     }
 }
 while getgenv().respawn == true do
-wait(1)
+wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
