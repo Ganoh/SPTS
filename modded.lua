@@ -29,13 +29,13 @@ local Tab = Window:CreateTab("Autofarming Stuff", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("AFK Farming stuff")
 getgenv().ms = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto MS",
+   Name = "Auto MS:100B",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().ms = Value
 local args = {
     [1] = {
-        [1] = "+MS11"
+        [1] = "+MS12"
     }
 }
 while getgenv().ms == true do
@@ -46,13 +46,13 @@ end
 })
 getgenv().jf = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto JF",
+   Name = "Auto JF:100B",
    CurrentValue = false,
    Callback = function(Value)
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF11"
+        [1] = "+JF12"
     }
 }
    while getgenv().jf == true do
