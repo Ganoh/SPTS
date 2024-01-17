@@ -55,10 +55,10 @@ local args = {
         [1] = "+JF14"
     }
 }
-   while getgenv().jf == true do
-   wait(0.01)
-   game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-   end
+while getgenv().jf == true do
+wait(0.01)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
    end,
 })
 getgenv().pp = true
