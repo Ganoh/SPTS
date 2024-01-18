@@ -97,13 +97,13 @@ end
 })
 getgenv().fs = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto FS:55Dc",
+   Name = "Auto FS:30Ud",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().fs = Value
 local args = {
     [1] = {
-        [1] = "+FS15"
+        [1] = "+FS16"
     }
 }
 while getgenv().fs == true do
