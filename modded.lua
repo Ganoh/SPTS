@@ -147,6 +147,40 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+getgenv().respawn = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Respawn 50s",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().respawn = Value
+local args = {
+    [1] = {
+        [1] = "Respawn"
+    }
+}
+while getgenv().respawn == true do
+wait(50)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
+getgenv().respawn = true
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Respawn 100s",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().respawn = Value
+local args = {
+    [1] = {
+        [1] = "Respawn"
+    }
+}
+while getgenv().respawn == true do
+wait(100)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
 local Tab = Window:CreateTab("Auto Claim And Skills", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("TPM reward")
 getgenv().rw = true
