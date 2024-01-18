@@ -46,13 +46,13 @@ end
 })
 getgenv().jf = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto JF:100Qa",
+   Name = "Auto JF:10Qi",
    CurrentValue = false,
    Callback = function(Value)
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF15"
+        [1] = "+JF16"
     }
 }
 while getgenv().jf == true do
