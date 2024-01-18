@@ -129,6 +129,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+local Section = Tab:CreateSection("Auto Respawn")
 getgenv().respawn = true
 local Toggle = Tab:CreateToggle({
    Name = "Auto Respawn 10s",
@@ -163,7 +164,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
-local Tab = Window:CreateTab("Auto Claim reward", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Auto Claim And Skills", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("TPM reward")
 getgenv().rw = true
 local Toggle = Tab:CreateToggle({
@@ -179,6 +180,24 @@ wait(1)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
+end
+   end,
+})
+local Section = Tab:CreateSection("Skill")
+getgenv().inv = true
+local Toggle = Tab:CreateToggle({
+   Name = "Invisible",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().inv = Value
+local args = {
+    [1] = {
+        [1] = "Skill_Invisible",
+        [2] = "Start"
+    }
+}
+while getgenv().inv == true do
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
 })
