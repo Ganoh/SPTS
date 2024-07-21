@@ -80,13 +80,13 @@ end
 })
 getgenv().bt = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto BT:10Dd",
+   Name = "Auto BT:1Td",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
     [1] = {
-        [1] = "+BT23"
+        [1] = "+BT24"
     }
 }
 while getgenv().bt == true do
@@ -219,6 +219,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+local Section = Tab:CreateSection("GUI")
 local Button = Tab:CreateButton({
    Name = "Destroying the Interface",
    Callback = function()
