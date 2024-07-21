@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/modded/main/modded.lua"))()
