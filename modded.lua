@@ -26,6 +26,12 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local Tab = Window:CreateTab("Autofarming Stuff", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Anti AFK")
+local VU = game:GetService("VirtualUser")
+while wait(100) do  -- You can change this to how fast as you want. --
+    VU:CaptureController()
+    VU:ClickButton2(Vector2.new())
+end
 local Section = Tab:CreateSection("AFK Farming stuff")
 getgenv().ms = true
 local Toggle = Tab:CreateToggle({
