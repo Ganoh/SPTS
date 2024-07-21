@@ -1,5 +1,6 @@
 getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Waza80/scripts/main/MacOSRayfield.lua'))()
+local Rayfieltoggle = loadstring(game:HttpGet('https://raw.githubusercontent.com/Waza80/scripts/main/RayfieldToggle.lua '))()
 local Window = Rayfield:CreateWindow({
    Name = "SPTS: Modded",
    LoadingTitle = "SPTS Modded script",
