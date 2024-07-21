@@ -1,5 +1,5 @@
 getgenv().SecureMode = true
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Waza80/scripts/main/RayfieldToggle.lua'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "SPTS: Modded",
    LoadingTitle = "SPTS Modded script",
@@ -226,3 +226,4 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
+Rayfield:LoadConfiguration()
