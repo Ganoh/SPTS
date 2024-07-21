@@ -219,3 +219,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Destroying the Interface",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
