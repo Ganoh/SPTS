@@ -1,5 +1,5 @@
 getgenv().SecureMode = true
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Waza80/scripts/main/ModifiedRayfield.lua'))()
 local Window = Rayfield:CreateWindow({
    Name = "SPTS: Modded",
    LoadingTitle = "SPTS Modded script",
