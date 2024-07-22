@@ -80,13 +80,13 @@ end
 })
 getgenv().bt = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto BT:10Dd",
+   Name = "Auto BT:1Td",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
     [1] = {
-        [1] = "+BT23"
+        [1] = "+BT24"
     }
 }
 while getgenv().bt == true do
