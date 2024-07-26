@@ -226,4 +226,3 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
-Rayfield:LoadConfiguration()
