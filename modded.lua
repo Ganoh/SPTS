@@ -35,7 +35,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().ms = Value
 local args = {
     [1] = {
-        [1] = "+MS20"
+        [1] = "+MS21"
     }
 }
 while getgenv().ms == true do
@@ -52,7 +52,7 @@ local Toggle = Tab:CreateToggle({
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF20"
+        [1] = "+JF21"
     }
 }
 while getgenv().jf == true do
@@ -80,13 +80,13 @@ end
 })
 getgenv().bt = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto BT:1Td",
+   Name = "Auto BT:100Td",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
     [1] = {
-        [1] = "+BT24"
+        [1] = "+BT22"
     }
 }
 while getgenv().bt == true do
@@ -97,13 +97,13 @@ end
 })
 getgenv().fs = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto FS:11Dd",
+   Name = "Auto FS:4Td",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().fs = Value
 local args = {
     [1] = {
-        [1] = "+FS17"
+        [1] = "+FS18"
     }
 }
 while getgenv().fs == true do
