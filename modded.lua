@@ -63,13 +63,13 @@ end
 })
 getgenv().pp = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto PP:22.2Dd",
+   Name = "Auto PP:7.7Td",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().pp = Value
 local args = {
     [1] = {
-        [1] = "+PP16"
+        [1] = "+PP17"
     }
 }
 while getgenv().pp == true do
