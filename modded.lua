@@ -73,7 +73,7 @@ local args = {
     }
 }
 while getgenv().pp == true do
-wait(0.1)
+wait(0.01)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -90,7 +90,7 @@ local args = {
     }
 }
 while getgenv().bt == true do
-wait(0.1)
+wait(0.01)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -107,7 +107,7 @@ local args = {
     }
 }
 while getgenv().fs == true do
-wait(0.1)
+wait(0.01)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
