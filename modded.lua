@@ -73,24 +73,24 @@ local args = {
     }
 }
 while getgenv().pp == true do
-wait(0.01)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
 })
 getgenv().bt = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto BT:15Qad",
+   Name = "Auto BT:2Qid",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
     [1] = {
-        [1] = "+BT26"
+        [1] = "+BT27"
     }
 }
 while getgenv().bt == true do
-wait(0.01)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -107,7 +107,7 @@ local args = {
     }
 }
 while getgenv().fs == true do
-wait(0.01)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
