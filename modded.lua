@@ -243,4 +243,3 @@ while wait(10) do
 	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
 	end)
 end
-Rayfield:LoadConfiguration()
