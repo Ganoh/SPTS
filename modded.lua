@@ -205,10 +205,14 @@ local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 while getgenv().rw == true do
-wait(50)
+wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
+game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end
    end,
 })
