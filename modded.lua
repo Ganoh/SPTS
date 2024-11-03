@@ -194,18 +194,8 @@ end
    end,
 })
 local Tab = Window:CreateTab("Auto Claim And Skills", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("TPM reward")
+local Section = Tab:CreateSection("TPM Reward")
 getgenv().rw = true
-local Button = Tab:CreateButton({
-   Name = "Anti AFK",
-   Callback = function()
-local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-wait(10)
-vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   end,
-})
 local Toggle = Tab:CreateToggle({
    Name = "Auto Claim FS,BT,PP",
    CurrentValue = false,
@@ -220,6 +210,18 @@ game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
 end
+   end,
+})
+local Section = Tab:CreateSection("Anti AFK")
+getgenv().inv = true
+local Button = Tab:CreateButton({
+   Name = "Anti AFK",
+   Callback = function()
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(10)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
    end,
 })
 local Section = Tab:CreateSection("Skill")
