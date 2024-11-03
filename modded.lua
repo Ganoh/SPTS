@@ -197,7 +197,7 @@ local Tab = Window:CreateTab("Auto Claim And Skills", 4483362458) -- Title, Imag
 local Section = Tab:CreateSection("TPM Reward")
 getgenv().rw = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto Claim FS,BT,PP + Anti AFK",
+   Name = "Auto Claim FS,BT,PP",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().rw = Value
@@ -209,7 +209,7 @@ wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
-Rayfield:LoadConfiguration()
+game:GetService("VirtualUser"):ClickButton2(Vector2.new())
 end
    end,
 })
