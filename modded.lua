@@ -209,7 +209,6 @@ wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
-game:GetService("VirtualUser"):ClickButton2(Vector2.new())
 end
    end,
 })
@@ -239,5 +238,9 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
-Rayfield:LoadConfiguration()
+while wait(10) do
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+	end)
 end
+Rayfield:LoadConfiguration()
