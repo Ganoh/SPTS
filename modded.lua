@@ -209,13 +209,9 @@ wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
-end
-local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
-vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-wait(10)
-vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-Rayfield:LoadConfiguration()
+game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end
    end,
 })
 local Section = Tab:CreateSection("Skill")
