@@ -1,2 +1,2 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/SPTS/main/modded.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/SPTS/main/Modded"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/SPTS/main/ROTR"))()
