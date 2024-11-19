@@ -238,7 +238,7 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
-while wait(10) do
+while wait(50) do
 	game:GetService("Players").LocalPlayer.Idled:connect(function()
 	game:GetService("VirtualUser"):ClickButton2(Vector2.new())
 	end)
