@@ -35,7 +35,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().ms = Value
 local args = {
     [1] = {
-        [1] = "+MS10"
+        [1] = "+MS14"
     }
 }
 while getgenv().ms == true do
@@ -52,7 +52,7 @@ local Toggle = Tab:CreateToggle({
    getgenv().jf = Value
 local args = {
     [1] = {
-        [1] = "+JF10"
+        [1] = "+JF14"
     }
 }
 while getgenv().jf == true do
