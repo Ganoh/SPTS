@@ -205,12 +205,10 @@ local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 while getgenv().rw == true do
-wait(1)
+wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
-game:GetService("ReplicatedStorage"):WaitForChild("TPM"):FireServer(unpack(args))
-game:GetService("ReplicatedStorage"):WaitForChild("RCM"):FireServer(unpack(args))
 end
    end,
 })
