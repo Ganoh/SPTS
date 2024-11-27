@@ -127,6 +127,23 @@ _G.Disabled=true;while true do if _G.Disabled then break end;wait()local functio
    end,
 })
 local Toggle = Tab:CreateToggle({
+   Name = "Auto Respawn 1s",
+   CurrentValue = false,
+   Callback = function(Value)
+getgenv().respawn = Value
+local args = {
+    [1] = {
+        [1] = "Respawn"
+    }
+}
+while getgenv().respawn == true do
+wait(1)
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+   end,
+})
+getgenv().respawn = true
+local Toggle = Tab:CreateToggle({
    Name = "Auto Respawn 10s",
    CurrentValue = false,
    Callback = function(Value)
@@ -138,57 +155,6 @@ local args = {
 }
 while getgenv().respawn == true do
 wait(10)
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
-})
-getgenv().respawn = true
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn 30s",
-   CurrentValue = false,
-   Callback = function(Value)
-getgenv().respawn = Value
-local args = {
-    [1] = {
-        [1] = "Respawn"
-    }
-}
-while getgenv().respawn == true do
-wait(30)
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
-})
-getgenv().respawn = true
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn 50s",
-   CurrentValue = false,
-   Callback = function(Value)
-getgenv().respawn = Value
-local args = {
-    [1] = {
-        [1] = "Respawn"
-    }
-}
-while getgenv().respawn == true do
-wait(50)
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
-})
-getgenv().respawn = true
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn 100s",
-   CurrentValue = false,
-   Callback = function(Value)
-getgenv().respawn = Value
-local args = {
-    [1] = {
-        [1] = "Respawn"
-    }
-}
-while getgenv().respawn == true do
-wait(100)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
