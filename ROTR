@@ -63,13 +63,13 @@ end
 })
 getgenv().pp = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto PP:1Spd",
+   Name = "Auto PP:1Ocd",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().pp = Value
 local args = {
     [1] = {
-        [1] = "+PP18"
+        [1] = "+PP19"
     }
 }
 while getgenv().pp == true do
@@ -171,7 +171,7 @@ local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 while getgenv().rw == true do
-wait(10)
+wait(1)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
