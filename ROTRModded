@@ -131,9 +131,9 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().respawn = Value
 local args = {
-    [1] = {
-        [1] = "Respawn"
-    }
+	{
+		"Respawn"
+	}
 }
 while getgenv().respawn == true do
 wait(5)
@@ -148,9 +148,9 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().respawn = Value
 local args = {
-    [1] = {
-        [1] = "Respawn"
-    }
+	{
+		"Respawn"
+	}
 }
 while getgenv().respawn == true do
 wait(10)
