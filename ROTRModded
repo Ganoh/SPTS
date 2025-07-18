@@ -73,7 +73,7 @@ end
 })
 getgenv().pp = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto PP:1NoVg",
+   Name = "Auto PP:250Tg",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().pp = Value
@@ -107,7 +107,7 @@ end
 })
 getgenv().fs = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto FS:250Tg",
+   Name = "Auto FS:3Tg",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().fs = Value
