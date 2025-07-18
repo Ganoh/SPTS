@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "SPTS: ROTR Modded Script",
    LoadingSubtitle = "",
    ConfigurationSaving = {
-      Enabled = false,
+      Enabled = true,
       FolderName = , 
       FileName = ""
    },
