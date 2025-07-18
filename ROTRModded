@@ -7,8 +7,8 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = , 
-      FileName = ""
+      FolderName = SPTS, 
+      FileName = "SPTS"
    },
    Discord = {
       Enabled = false,
