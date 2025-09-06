@@ -78,7 +78,7 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().pp = Value
 local args = {
-	 [1] = {
+	[1] = {
         [1] = "+PP37"
     }
 }
@@ -95,7 +95,7 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
-	 [1] = {
+	[1] = {
         [1] = "+BT41"
     }
 }
