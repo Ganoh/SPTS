@@ -79,11 +79,11 @@ local Toggle = Tab:CreateToggle({
 getgenv().pp = Value
 local args = {
 	[1] = {
-        [1] = "+PP38"
+        [1] = "+PP43"
     }
 }
 while getgenv().pp == true do
-wait(0.01)
+wait(0)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -96,11 +96,11 @@ local Toggle = Tab:CreateToggle({
 getgenv().bt = Value
 local args = {
 	[1] = {
-        [1] = "+BT42"
+        [1] = "+BT48"
     }
 }
 while getgenv().bt == true do
-wait(0.01)
+wait(0)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -113,27 +113,13 @@ local Toggle = Tab:CreateToggle({
 getgenv().fs = Value
 local args = {
 	[1] = {
-        [1] = "+FS39"
+        [1] = "+FS44"
     }
 }
 while getgenv().fs == true do
-wait(0.01)
+wait(0)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
-   end,
-})
-local Section = Tab:CreateSection("Auto Respawn")
-getgenv().respawn = true
-local Button = Tab:CreateButton({
-   Name = "Death Train ON",
-   Callback = function()
-_G.Disabled=false;while true do if _G.Disabled then break end;wait()local function a()if _G.Disabled then return end;local b=game.Players.LocalPlayer.Character:WaitForChild("Humanoid")local c=tonumber(string.format("%.0f",b.Health))local d=tonumber(string.format("%.0f",b.MaxHealth))*0/100;if c<=d then momentorespawn=true end;if not momentorespawn then lastlocationx=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x;lastlocationy=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y;lastlocationz=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z end;if momentorespawn and game.Players.LocalPlayer.Character.HumanoidRootPart then wait(0.5)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(lastlocationx,lastlocationy,lastlocationz)wait(0.01)momentorespawn=false end end;delay(0,g)end
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Death Train OFF",
-   Callback = function()
-_G.Disabled=true;while true do if _G.Disabled then break end;wait()local function a()if _G.Disabled then return end;local b=game.Players.LocalPlayer.Character:WaitForChild("Humanoid")local c=tonumber(string.format("%.0f",b.Health))local d=tonumber(string.format("%.0f",b.MaxHealth))*0/100;if not momentorespawn then lastlocationx=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x;lastlocationy=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y;lastlocationz=game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z end;if momentorespawn and game.Players.LocalPlayer.Character.HumanoidRootPart then wait(0.5)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(lastlocationx,lastlocationy,lastlocationz)wait(0.01)momentorespawn=false end end;delay(0,g)end
    end,
 })
 local Toggle = Tab:CreateToggle({
@@ -181,7 +167,7 @@ local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 while getgenv().rw == true do
-wait(1)
+wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RecievePPReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveBTReward"):FireServer(unpack(args))
 game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(unpack(args))
@@ -205,13 +191,6 @@ while getgenv().inv == true do
 wait(1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
-   end,
-})
-local Section = Tab:CreateSection("GUI")
-local Button = Tab:CreateButton({
-   Name = "Destroying the Interface",
-   Callback = function()
-   Rayfield:Destroy()
    end,
 })
 Rayfield:LoadConfiguration()
