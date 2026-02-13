@@ -73,51 +73,51 @@ end
 })
 getgenv().pp = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto PP:3QiQag",
+   Name = "Auto PP:4SxQag",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().pp = Value
 local args = {
 	[1] = {
-        [1] = "+PP45"
+        [1] = "+PP46"
     }
 }
 while getgenv().pp == true do
-wait(0)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
 })
 getgenv().bt = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto BT:3QiQag",
+   Name = "Auto BT:4SxQag",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
 	[1] = {
-        [1] = "+BT49"
+        [1] = "+BT50"
     }
 }
 while getgenv().bt == true do
-wait(0)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
 })
 getgenv().fs = true
 local Toggle = Tab:CreateToggle({
-   Name = "Auto FS:3QaQag",
+   Name = "Auto FS:3QiQag",
    CurrentValue = false,
    Callback = function(Value)
 getgenv().fs = Value
 local args = {
 	[1] = {
-        [1] = "+FS45"
+        [1] = "+FS46"
     }
 }
 while getgenv().fs == true do
-wait(0)
+wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
