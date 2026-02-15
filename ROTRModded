@@ -44,12 +44,12 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().ms = Value
 local args = {
-    [1] = {
-        [1] = "+MS10"
-    }
+	{
+		"+MS10"
+	}
 }
 while getgenv().ms == true do
-wait(0.1)
+wait()
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -61,12 +61,12 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
    getgenv().jf = Value
 local args = {
-    [1] = {
-        [1] = "+JF10"
-    }
+	{
+		"+JF10"
+	}
 }
 while getgenv().jf == true do
-wait(0.1)
+wait()
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
@@ -78,9 +78,9 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().pp = Value
 local args = {
-	[1] = {
-        [1] = "+PP46"
-    }
+	{
+		"+PP46"
+	}
 }
 while getgenv().pp == true do
 wait()
@@ -95,9 +95,9 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().bt = Value
 local args = {
-	[1] = {
-        [1] = "+BT50"
-    }
+	{
+		"+BT50"
+	}
 }
 while getgenv().bt == true do
 wait()
@@ -112,45 +112,12 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 getgenv().fs = Value
 local args = {
-	[1] = {
-        [1] = "+FS46"
-    }
+	{
+		"+FS46"
+	}
 }
 while getgenv().fs == true do
 wait()
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
-})
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn 5s",
-   CurrentValue = false,
-   Callback = function(Value)
-getgenv().respawn = Value
-local args = {
-	{
-		"ScrollWheelReset"
-	}
-}
-while getgenv().respawn == true do
-wait(5)
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
-})
-getgenv().respawn = true
-local Toggle = Tab:CreateToggle({
-   Name = "Auto Respawn 10s",
-   CurrentValue = false,
-   Callback = function(Value)
-getgenv().respawn = Value
-local args = {
-	{
-		"ScrollWheelReset"
-	}
-}
-while getgenv().respawn == true do
-wait(10)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
 end
    end,
