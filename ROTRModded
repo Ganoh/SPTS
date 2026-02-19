@@ -240,6 +240,7 @@ local args = {
 	}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
    end,
 })
 Rayfield:LoadConfiguration()
