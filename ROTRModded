@@ -141,7 +141,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("RecieveFSReward"):FireServer(
 end
    end,
 })
-local Button = Tab:CreateButton("UC")
+local Section = Tab:CreateSection("UC")
+local Button = Tab:CreateButton({
    Name = "Claim Daily UC",
    Callback = function()
    local args = {
@@ -240,7 +241,6 @@ local args = {
 	}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
    end,
 })
 Rayfield:LoadConfiguration()
