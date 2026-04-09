@@ -79,7 +79,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().pp = Value
 local args = {
 	{
-		"+PP46"
+		"+PP49"
 	}
 }
 while getgenv().pp == true do
@@ -96,7 +96,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().bt = Value
 local args = {
 	{
-		"+BT50"
+		"+BT53"
 	}
 }
 while getgenv().bt == true do
@@ -113,7 +113,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().fs = Value
 local args = {
 	{
-		"+FS47"
+		"+FS48"
 	}
 }
 while getgenv().fs == true do
@@ -122,106 +122,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
-local Section = Tab:CreateSection("UC")
-local Button = Tab:CreateButton({
-   Name = "Claim Daily UC",
-   Callback = function()
-   local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D1"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D2"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D3"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D4"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D5"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D6"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D7"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D8"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D9"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D10"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D11"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-local args = {
-	{
-		"FinishMission",
-		"Daily",
-		"UC_D12"
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-   end,
-})
 Rayfield:LoadConfiguration()
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
