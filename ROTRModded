@@ -113,7 +113,7 @@ local Toggle = Tab:CreateToggle({
 getgenv().fs = Value
 local args = {
 	{
-		"+FS49"
+		"+FS50"
 	}
 }
 while getgenv().fs == true do
