@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = SPTEndless, -- Create a custom folder for your hub/game
+      FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "SPTEndless"
    },
 
@@ -71,55 +71,50 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 end
    end,
 })
-getgenv().pp = true
 local Toggle = Tab:CreateToggle({
    Name = "Auto PP: 10Qig",
-   CurrentValue = false,
+   CurrentValue = true,
+   Flag = "Auto PP: 10Qig",
    Callback = function(Value)
-getgenv().pp = Value
 local args = {
 	{
 		"+PP50"
 	}
 }
-while getgenv().pp == true do
 wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
+end,
 })
-getgenv().bt = true
+
 local Toggle = Tab:CreateToggle({
    Name = "Auto BT: 10Qig",
-   CurrentValue = false,
+   CurrentValue = true,
+   Flag = "Auto BT: 10Qig",
    Callback = function(Value)
-getgenv().bt = Value
 local args = {
 	{
 		"+BT54"
 	}
 }
-while getgenv().bt == true do
 wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
+end,
 })
-getgenv().fs = true
+
+
 local Toggle = Tab:CreateToggle({
    Name = "Auto FS: 7.5NoQag",
    CurrentValue = false,
+   Flag = "Auto FS: 10Qig",
    Callback = function(Value)
-getgenv().fs = Value
 local args = {
 	{
 		"+FS50"
 	}
 }
-while getgenv().fs == true do
 wait(0.1)
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-end
-   end,
+end,
 })
+
 Rayfield:LoadConfiguration()
