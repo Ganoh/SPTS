@@ -78,7 +78,7 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 local args = {
 	{
-		"+PP50"
+		"+PP51"
 	}
 }
 wait(0.1)
@@ -93,7 +93,7 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 local args = {
 	{
-		"+BT54"
+		"+BT55"
 	}
 }
 wait(0.1)
@@ -109,7 +109,7 @@ local Toggle = Tab:CreateToggle({
    Callback = function(Value)
 local args = {
 	{
-		"+FS50"
+		"+FS52"
 	}
 }
 wait(0.1)
