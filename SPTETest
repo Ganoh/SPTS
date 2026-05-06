@@ -50,7 +50,7 @@ local Farming = {
 
 -- Auto MS
 Tab:CreateToggle({
-   Name = "Auto MS: 10M Ton",
+   Name = "MS: 10M Ton",
    CurrentValue = false,
    Callback = function(Value)
       Farming.ms = Value
@@ -67,7 +67,7 @@ Tab:CreateToggle({
 
 -- Auto JF
 Tab:CreateToggle({
-   Name = "Auto JF: 10M Ton",
+   Name = "JF: 10M Ton",
    CurrentValue = false,
    Callback = function(Value)
       Farming.jf = Value
