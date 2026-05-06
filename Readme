@@ -1,1 +1,2 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/SPTE/refs/heads/main/SPTEndless"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ganoh/SPTE/refs/heads/main/SPTETest"))()
