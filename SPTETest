@@ -84,7 +84,7 @@ Tab:CreateToggle({
 
 -- Auto PP
 Tab:CreateToggle({
-   Name = "Auto PP: 10Qig",
+   Name = "PP: 15UQig",
    CurrentValue = false,
    Flag = "AutoPP10Qig",
    Callback = function(Value)
@@ -102,7 +102,7 @@ Tab:CreateToggle({
 
 -- Auto BT
 Tab:CreateToggle({
-   Name = "Auto BT: 10Qig",
+   Name = "BT: 15UQig",
    CurrentValue = false,
    Flag = "AutoBT10Qig",
    Callback = function(Value)
@@ -120,7 +120,7 @@ Tab:CreateToggle({
 
 -- Auto FS
 Tab:CreateToggle({
-   Name = "Auto FS: 7.5NoQag",
+   Name = "FS: 15UQig",
    CurrentValue = false,
    Flag = "AutoFS10Qig",
    Callback = function(Value)
