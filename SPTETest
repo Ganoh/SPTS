@@ -1,0 +1,139 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "SPT: Endless",
+   Icon = 0, 
+   LoadingTitle = "SPT: Endless",
+   LoadingSubtitle = "By Ganoh",
+   ShowText = "Rayfield", 
+   Theme = "Default", 
+
+   ToggleUIKeybind = "K", 
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, 
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, 
+      FileName = "SPTEndless"
+   },
+
+   Discord = {
+      Enabled = false, 
+      Invite = "noinvitelink", 
+      RememberJoins = true 
+   },
+
+   KeySystem = false, 
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", 
+      FileName = "Key", 
+      SaveKey = true, 
+      GrabKeyFromSite = false, 
+      Key = {"Hello"} 
+   }
+})
+
+local Tab = Window:CreateTab("Autofarming Stuff", 4483362458) 
+local Section = Tab:CreateSection("AFK Farming stuff")
+
+-- A central table to track toggle states cleanly
+local Farming = {
+    ms = false,
+    jf = false,
+    pp = false,
+    bt = false,
+    fs = false
+}
+
+-- Auto MS
+Tab:CreateToggle({
+   Name = "Auto MS: 10M Ton",
+   CurrentValue = false,
+   Callback = function(Value)
+      Farming.ms = Value
+      if Value then
+         task.spawn(function()
+            while Farming.ms do
+               game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer({"+MS10"})
+               task.wait(0.1)
+            end
+         end)
+      end
+   end,
+})
+
+-- Auto JF
+Tab:CreateToggle({
+   Name = "Auto JF: 10M Ton",
+   CurrentValue = false,
+   Callback = function(Value)
+      Farming.jf = Value
+      if Value then
+         task.spawn(function()
+            while Farming.jf do
+               game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer({"+JF10"})
+               task.wait(0.1)
+            end
+         end)
+      end
+   end,
+})
+
+-- Auto PP
+Tab:CreateToggle({
+   Name = "Auto PP: 10Qig",
+   CurrentValue = false,
+   Flag = "AutoPP10Qig",
+   Callback = function(Value)
+      Farming.pp = Value
+      if Value then
+         task.spawn(function()
+            while Farming.pp do
+               game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer({"+PP51"})
+               task.wait(0.1)
+            end
+         end)
+      end
+   end,
+})
+
+-- Auto BT
+Tab:CreateToggle({
+   Name = "Auto BT: 10Qig",
+   CurrentValue = false,
+   Flag = "AutoBT10Qig",
+   Callback = function(Value)
+      Farming.bt = Value
+      if Value then
+         task.spawn(function()
+            while Farming.bt do
+               game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer({"+BT55"})
+               task.wait(0.1)
+            end
+         end)
+      end
+   end,
+})
+
+-- Auto FS
+Tab:CreateToggle({
+   Name = "Auto FS: 7.5NoQag",
+   CurrentValue = false,
+   Flag = "AutoFS10Qig",
+   Callback = function(Value)
+      Farming.fs = Value
+      if Value then
+         task.spawn(function()
+            while Farming.fs do
+               game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer({"+FS52"})
+               task.wait(0.1)
+            end
+         end)
+      end
+   end,
+})
+
+Rayfield:LoadConfiguration()
